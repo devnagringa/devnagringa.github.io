@@ -13,7 +13,7 @@ layout: default
   <div class="posts">
     {% for post in paginator.posts %}
     <div class="post-teaser">
-      {% if post.thumbnail %} 
+      {% if post.thumbnail %}
       <div class="post-img">
          <img src="{{ site.baseurl }}/{{ post.thumbnail }}">
       </div>
@@ -35,6 +35,12 @@ layout: default
               {{ site.theme_settings.str_continue_reading }}
             </a>-->
           </div>
+          <br />
+          <div id="tags-home">
+            {% capture tag_list %}{{ post.tags | join: "|"}}{% endcapture %}
+            {% include tags_list.html tags=tag_list %}
+          </div>
+
       </span>
     </div>
     {% endfor %}
