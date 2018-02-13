@@ -1,5 +1,7 @@
 # SITE CONFIGURATION
+
 baseurl: ""
+
 url: "http://devnagringa.com"
 
 # THEME-SPECIFIC CONFIGURATION
