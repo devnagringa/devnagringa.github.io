@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9" lang="en"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<head>
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a870e511d81c2e3"></script>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,500,700">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+  <title>{{ site.title }}</title>
+  <meta name = "format-detection" content = "telephone=no" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!--meta info-->
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}assets/images/fav_icon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="{{ site.theme_settings.title }}" href="{{ site.url }}/feed.xml"/>
+
+  <!--stylesheet include-->
+  <link rel="stylesheet" type="text/css" media="all" href="{{ site.baseurl }}/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" media="all" href="{{ site.baseurl }}/assets/css/style.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" media="all" href="{{ site.baseurl }}/assets/css/responsive.css">
+  <link rel="stylesheet" type="text/css" media="all" href="{{ site.baseurl }}/assets/css/owl.carousel.css">
+  <!--modernizr-->
+  <script src="{{ site.baseurl }}/assets/js/jquery.modernizr.js"></script>
+  {% if site.theme_settings.google_analytics %}
+<script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', '{{ site.theme_settings.google_analytics }}', 'auto');
+    ga('send', 'pageview');
+
+</script>
+{% endif %}
+
+
+</head>
+
+<body class="wide_layout">
+
+  <div class="loader"></div>
+  <!--[if (lt IE 9) | IE 9]>
+    <div class="ie_message_block">
+      <div class="container">
+        <div class="wrapper">
+          <div class="clearfix"><i class="fa fa-exclamation-triangle f_left"></i><b>Attention!</b> This page may   not display correctly. You are using an outdated version of Internet Explorer. For a faster, safer browsing experience.<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode" class="button button_type_3 button_grey_light f_right" target="_blank">Update Now!</a></div>
+        </div>
+      </div>
+    </div>
+  <![endif]-->
+
+  <!--cookie-->
+  <!-- <div class="cookie">
+          <div class="container">
+            <div class="clearfix">
+              <span>Please note this website requires cookies in order to function correctly, they do not store any specific information about you personally.</span>
+              <div class="f_right"><a href="#" class="button button_type_3 button_orange">Accept Cookies</a><a href="#" class="button button_type_3 button_grey_light">Read More</a></div>
+            </div>
+          </div>
+        </div>-->
+  <div class="wrapper_container">
+    <!--==============================header=================================-->
+    <header role="banner" class="header header_6">
+      <div class="h_bot_part">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="clearfix">
+                <a href="{{ site.baseurl }}" class="f_left logo"><img src="{{ site.baseurl }}/assets/images/logo.png" height-"100" alt=""></a>
+                <a href="#" class="f_right"><img src="{{ site.baseurl }}/assets/images/header_ph.jpg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--main menu container-->
+      <div class="menu_wrap">
+        <div class="container clearfix menu_border_wrap">
+          <!--button for responsive menu-->
+          <button id="menu_button">
+              Menu
+            </button>
+          <!--main menu-->
+          <nav role="navigation" class="main_menu menu_var2">
+            <ul>
+              <li>
+                <a href="{{ site.url }}">Inicio
+                  <span class="plus"><i class="fa fa-plus-square-o"></i><i class="fa fa-minus-square-o"></i></span></a>
+
+
+              </li>
+              {% for pagem in site.pages %}
+              {% if pagem.title and pagem.hide != true %}
+              <li class=""> <a href="{{ pagem.url | relative_url }}">{{ pagem.title }}
+                <span class="plus"><i class="fa fa-plus-square-o"></i><i class="fa fa-minus-square-o"></i></span></a>
+              </li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </nav>
+
+        </div>
+      </div>
+    </header>
+    <!--==========
+    ====================Breadcrumb================================-->
+    {{% if page.title %}}
+    <div class="breadcrumb">
+      <div class="container">
+        <div>
+          <span><a href="#">Inicio</a></span> / {{ page.title }}
+        </div>
+      </div>
+    </div>
+    {{% endif %}}

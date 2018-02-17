@@ -1,0 +1,10 @@
+{% assign tags = include.tags | split:'|' | sort | uniq %}
+  <div class="buttons_container">
+{% if include.tags.size > 0 %}
+
+        {% for tag in tags %}
+          <a href="{{site.baseurl}}/tags#{{tag}}" class="button banner_button travel"> {{ tag }}</a>
+        {% endfor %}      
+
+  {% endif %}
+  </div>

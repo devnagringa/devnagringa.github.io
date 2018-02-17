@@ -1,0 +1,16 @@
+<div class="text_post_section post_controls">
+  <div class="clearfix">
+    {% if page.previous.url %}
+    <div class="prev_post">
+      <a href="{{ site.baseurl }}{{ page.previous.url }}" class="button button_type_icon_medium button_grey_light">{{ site.theme_settings.str_previous_post }}<i class="fa fa-angle-left"></i></a>
+      <a href="{{ site.baseurl }}{{ page.previous.url }}"><h5>  {{ page.previous.title }}</h5></a>
+    </div>
+    {% endif %}
+    {% if page.next.url %}
+    <div class="next_post">
+      <a href="{{ site.baseurl }}{{ page.next.url }}" class="button button_type_icon_medium button_grey_light">{{ site.theme_settings.str_next_post }}<i class="fa fa-angle-right"></i></a>
+      <a href="{{ site.baseurl }}{{ page.next.url }}"><h5>  {{ page.next.title }}</h5></a>
+    </div>
+    {% endif %}
+  </div>
+</div>

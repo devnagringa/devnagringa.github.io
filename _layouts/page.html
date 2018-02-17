@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="col-lg-8 col-md-8 col-sm-12">
+    <div class="section text_post_block">
+      <h2 class="section_title section_title_big">  {{ page.title }}</h2>
+      {% if page.subtitle %}
+      <h2 class="subtitle">{{ page.subtitle }}</h2>
+      {% endif %}
+      <div>
+        <img src="{{ site.baseurl }}/assets/images/post_img_medium.jpg" alt="">
+      </div>
+      <p>
+      {{ content }}</p>
+    </div>
+            <!-- Tag list for portfolio -->
+            {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %}
+            {% include tags_list.html tags=tag_list %}
+</div>
