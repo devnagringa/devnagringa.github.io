@@ -61,39 +61,19 @@
   <div class="section">
     <h3 class="section_title">Meat Our Writers</h3>
     <ul class="writers_list clearfix">
+      {% for user in site.team %}
       <li>
         <a href="#">
           <div>
-            <img src="/assets/images/writer_1.jpg" alt="">
+            <img src="{{ site.url }}/{{ user.avatar }}" alt="">
           </div>
           <div class="post_text">
-            <h4>Jessica Priston</h4>
-            <div class="event_date">Writer</div>
+            <h4>{{ user.name }}</h4>
+            <div class="event_date">{{ user.title }}</div>
           </div>
         </a>
       </li>
-      <li>
-        <a href="#">
-          <div>
-            <img src="/assets/images/writer_2.jpg" alt="">
-          </div>
-          <div class="post_text">
-            <h4>John Franklin</h4>
-            <div class="event_date">Contributing Editor</div>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <div>
-            <img src="/assets/images/writer_3.jpg" alt="">
-          </div>
-          <div class="post_text">
-            <h4>Camala Haddon</h4>
-            <div class="event_date">Writer</div>
-          </div>
-        </a>
-      </li>
+       {% endfor %}
     </ul>
   </div>
   <div class="section form_section">
