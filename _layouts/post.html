@@ -28,8 +28,8 @@ layout: default
               {% endif %}
               <div class="text_post_block">
                 {% if page.feature-img %}
-                <div>
-                    <a href="#"><img src="{{ site.baseurl }}/{{ page.feature-img }}" alt="" class="img-post"></a>
+                <div class="scale_image_container">
+                    <a href="#"><img src="{{ site.baseurl }}/{{ page.feature-img }}" alt="" class="scale_image"></a>
                 </div>
                 {% endif %}
                 {{ content }}

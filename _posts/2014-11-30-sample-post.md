@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Sample post
+feature-img: "assets/images/post-image-example_750x325.png"
+thumbnail: "assets/images/post-image-example_750x325.png"
 tags: [entertainment, travel, health]
 author: "maiarafa10"
 ---
