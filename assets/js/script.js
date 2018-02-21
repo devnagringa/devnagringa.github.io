@@ -19,11 +19,11 @@
 					}
 				});
 			});
-			
+
 		}
 
 		// remove products from shopping cart
-		
+
 		$('[role="banner"]').on('click','.close_product',function(){
 			$(this).closest('li').animate({'opacity':'0'},function(){
 				$(this).slideUp(500);
@@ -114,7 +114,7 @@
 					}
 
 				}
-				
+
 			}
 
 			rMenu.init();
@@ -136,67 +136,7 @@
 
 		search_holder();
 
-		// twitter feed
-
-		window.tweet_slider = function(){
-
-			if($(".tweets").length){
-
-				var follow = $(".tweets").next('.tw_follow'),
-					config = {
-						username : 'fanfbmltemplate',
-						modpath: 'plugins/twitter/',
-						loading_text : '<img src="images/loader2.gif" alt="">',
-						template : '<p>{text}</p><p>{time}</p>'
-					}
-
-				$(".tweets").each(function(){
-
-					var self = $(this);
-
-					if(self.hasClass('single')){
-						config.template = '<p>{text}</p><p>{time}</p>';
-					}
-					self.tweet(config);
-					if(self.hasClass('single')){
-						var owl = self.data('owlCarousel');
-
-						$('.twc_prev').on('click',function(){owl.trigger('owl.prev');});
-						$('.twc_next').on('click',function(){owl.trigger('owl.next');});
-					}
-
-					var owlConfig = {
-						navSpeed : 800,
-						nav:true,
-						loop:true,
-						autoplay:true,
-	      				autoplaySpeed: 800,
-			    		navText:false,
-						items: 1,
-						onInitialized : function(){
-							self.find('.tweet_odd').parent().remove();
-						}
-					}
-
-					self.children('.tweet_list').owlCarousel(owlConfig);
-
-				});
-				follow.attr('href','https://twitter.com/'+config.username);
-			}
-
-			// twitter  
-
-		    jQuery('#twitter').tweet({
-		        username : 'fanfbmltemplate',
-				modpath: 'plugins/twitter/',
-				loading_text : '<img src="images/loader2.gif" alt="">',
-				template : '<li><p>{text}</p><p>{time}</p></li>'
-	    	})
-
-	    }
-
-	    tweet_slider();
-
+	
 		// News carousel
 
 		$("#owl-demo").owlCarousel({
@@ -371,7 +311,7 @@
 					}
 				});
 			});
-			
+
 		}
 
 		// tabs
@@ -402,7 +342,7 @@
 
 	      subscribe.on('submit',function(e){
 	        var self = $(this);
-	        
+
 	        if(self.find('input[type="email"]').val() == ''){
 	          text = "Please enter your e-mail!";
 	          message.html('<div class="alert_box warning"><p>'+text+'</p></div>')
@@ -417,7 +357,7 @@
 	          $.ajax({
 	            type: "POST",
 	            url: "bat/newsletter.php",
-	            data: self.serialize(), 
+	            data: self.serialize(),
 	            success: function(data){
 	              if(data == '1'){
 	                text = "Your email has been sent successfully!";
@@ -475,7 +415,7 @@
       	});
 
 	    // flexslider
-			
+
 		if($("#flexslider").length){
 			$("#flexslider").flexslider({
 				controlNav:false,
@@ -513,7 +453,7 @@
 			}
 
 		});
-    
+
 		// Sticky and Go-top
 
 		(function ($, window) {
@@ -637,7 +577,7 @@
 			var list = $(this).children('ul'),
 				select = $(this).find('select'),
 				title = $(this).find('.select_title');
-		 
+
 
 			// select items to list items
 
@@ -654,7 +594,7 @@
 			select.hide();
 
 			// open list
-			
+
 			title.on('click',function(){
 				list.slideToggle(400);
 				$(this).toggleClass('active');
@@ -703,7 +643,7 @@
 				triggerAccordeon($(this))
 			});
 		}
-			
+
 
 		tLink.on('click',function(){
 			$(this).toggleClass('active')
@@ -776,7 +716,7 @@
 		if($(".jackbox[data-group]").length){
 			jQuery(".jackbox[data-group]").jackBox("init",{
 			    showInfoByDefault: false,
-			    preloadGraphics: false, 
+			    preloadGraphics: false,
 			    fullscreenScalesContent: true,
 			    autoPlayVideo: false,
 			    flashVideoFirst: false,
@@ -790,7 +730,7 @@
 			    thumbnailHeight: 50,
 			    useThumbTooltips: false,
 			    showPageScrollbar: false,
-			    useKeyboardControls: true 
+			    useKeyboardControls: true
 			});
 		}
 
@@ -798,7 +738,7 @@
 
 		var slider;
 		if($('#price').length){
-			slider = $('#price').slider({ 
+			slider = $('#price').slider({
 			 	orientation: "horizontal",
 				range: true,
 				values: [ 0, 250 ],
@@ -835,7 +775,7 @@
 		// appear animation
 
 	    function animate(){
-	    	
+
 	     $("[data-appear-animation]").each(function() {
 
 	         var self = $(this);
@@ -910,7 +850,7 @@
 					easing:true,
 					lensFadeIn: 500,
 					lensFadeOut: 500
-				}); 
+				});
 
 				button.on("click", function(e){
 				  var ez = $('#zoom_image').data('elevateZoom');
@@ -921,7 +861,7 @@
 			}
 
 		})();
-    
+
 	});
 
 })(jQuery);
