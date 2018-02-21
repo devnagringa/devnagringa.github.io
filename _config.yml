@@ -108,3 +108,9 @@ team:
     avatar: null
     description: >
       Write something about you here
+  - username: fpaguiar
+    name: Felipe Aguiar
+    title: Developer
+    avatar: /assets/images/phelps_180x180.jpg
+    description: >
+      "If I had some duct tape, I could fix that." -- Angus MacGyver
