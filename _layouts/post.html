@@ -23,6 +23,9 @@ layout: default
               </div>
 
               <h2 class="section_title section_title_medium_var2">{{ page.title }}</h2>
+              {% if page.podcast %}
+               <iframe style="width:100%" height="120" src="{{ page.podcast }}"></iframe>
+              {% endif %}
               <div class="text_post_block">
                 {% if page.feature-img %}
                 <div>
