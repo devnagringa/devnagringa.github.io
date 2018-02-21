@@ -12,7 +12,7 @@
                          {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %}
                          {% include tags_list.html tags=tag_list %}
                        </div>
-                       <a href="#" class="icon_box">
+                       <a href="{{ site.baseurl }}{{ item.url }}" class="icon_box">
                          <i class="fas fa-volume-up"></i>
                        </a>
                      </div>
@@ -26,7 +26,7 @@
                      </div>
                    </div>
                    <div class="post_text">
-                     <h2 class="post_title"><a href="#">{{ item.title }}</a></h2>
+                     <h2 class="post_title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></h2>
                    </div>
                  </div>
                </li>
