@@ -1,0 +1,35 @@
+<!-- Portfolio Grid Section -->
+<div class="section read_post_list">
+             <ul class="row">
+               <!--Post-->
+               {% for item in site.podcast %}
+               <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                 <div class="section_post_left">
+                   <div class="scale_image_container with_buttons">
+                     <a href="{{ site.baseurl }}{{ item.url }}"><img src="{{ site.url }}/{{ item.img }}" alt="" class="scale_image"></a>
+                     <div class="post_image_buttons">
+                       <div class="buttons_container">
+                         {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %}
+                         {% include tags_list.html tags=tag_list %}
+                       </div>
+                       <a href="#" class="icon_box">
+                         <i class="fas fa-volume-up"></i>
+                       </a>
+                     </div>
+                     <div class="open_buttons clearfix">
+                       <div class="f_left"><a href="{{ site.baseurl }}{{ item.url }}" role="button" class="jackbox_button button button_grey_light"><i class="fa fa-link"></i></a></div>
+                     </div>
+                   </div>
+                   <div class="clearfix">
+                     <div class="f_left">
+                       <div class="event_date">{{ page.date | date: "%B %-d, %Y" }}</div>
+                     </div>
+                   </div>
+                   <div class="post_text">
+                     <h2 class="post_title"><a href="#">{{ item.title }}</a></h2>
+                   </div>
+                 </div>
+               </li>
+               {% endfor %}
+             </ul>
+</div>

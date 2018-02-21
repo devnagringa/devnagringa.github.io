@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    type-on-strap (0.3.0)
+    devnagringa (0.1.0)
       jekyll (~> 3.3)
       jekyll-paginate (~> 1.1)
       jekyll-seo-tag (~> 2.3)
@@ -60,8 +60,8 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.12)
+  devnagringa!
   rake (~> 10.0)
-  type-on-strap!
 
 BUNDLED WITH
    1.16.1
