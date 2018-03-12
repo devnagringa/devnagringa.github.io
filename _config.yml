@@ -108,3 +108,9 @@ team:
     avatar: /assets/images/phelps_180x180.jpg
     description: >
       "If I had some duct tape, I could fix that." -- Angus MacGyver
+  - username: heidiks
+    name: Heidi Kussakawa
+    title: Developer
+    avatar: https://avatars3.githubusercontent.com/heidiks?v=3&amp;s=180
+    description: >
+      "asdasdasdasdasda is better than Lorem Ipsum"
