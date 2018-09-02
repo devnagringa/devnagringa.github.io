@@ -6,7 +6,7 @@
                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                  <div class="section_post_left">
                    <div class="scale_image_container with_buttons">
-                     <a href="{{ site.baseurl }}{{ item.url }}"><img src="{{ site.url }}/{{ item.img }}" alt="" class="scale_image"></a>
+                     <a href="{{ site.baseurl }}{{ item.url }}"><img src="{{ item.img }}" alt="" class="scale_image"></a>
                      <div class="post_image_buttons">
                        <div class="buttons_container">
                          {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %}

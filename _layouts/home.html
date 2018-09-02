@@ -12,7 +12,7 @@ layout: default
         <div class="section_post_left">
           <div class="scale_image_container">
             {% if post.thumbnail %}
-              <a href="{{ post.url | prepend: site.baseurl }}"><img src="{{ site.baseurl }}/{{ post.thumbnail }}" alt="" class="scale_image"></a>
+              <a href="{{ post.url | prepend: site.baseurl }}"><img src="{{ post.thumbnail }}" alt="" class="scale_image"></a>
               <div class="post_image_buttons">
                   {% capture tag_list %}{{ post.tags | join: "|"}}{% endcapture %}
                   {% include tags_list.html tags=tag_list %}
